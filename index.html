@@ -5,64 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Validation Form</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="index.js"></script>
   </head>
   <body>
-    <body>
-		<h1 style="text-align: center;">REGISTRATION FORM</h1>
-        <form>
-<p>Name: <input type="text"
-							name="Name" /></p>
-
+    
+<form>
+	<div class="formdesign" id="name">Name:<input type="text" name="name">
+		<span class="formerror"><b>THIS IS AN ERROR!</b></span>
+	</div>
 </br>
-			
-<p>Address: <input type="text"
-							 name="Address" />
-		</p>
-
-    </br >
-			
-<p>E-mail Address: <input type="text"
-							 name="EMail" /></p>
-
-</br >
-			
-<p>Password: <input type="text"
-						 name="Password" /></p>
-
+<div class="formdesign" id="email">Email:<input type="email" name="email">
+	<span class="formerror"><b>THIS IS AN ERROR!</b></span>
+</div>
 </br>
-			
-<p>Telephone: <input type="text"
-						 name="Telephone" /></p>
-
+<div class="formdesign" id="phone">Phone number:<input type="phone" name="phone">
+	<span class="formerror"><b>THIS IS AN ERROR!</b></span>
+</div>
 </br>
-
-			
+<div class="formdesign" id="password">Password:<input type="text" name="password">
+	<span class="formerror"><b>THIS IS AN ERROR!</b></span>
+</div>
+</br>
+<div class="formdesign" id="cpassword">Confirm Password:<input type="text" name="cpassword">
+	<span class="formerror"><b>THIS IS AN ERROR!</b></span>
+</div>
+</br>
+<p>SELECT YOUR COURSE
+<select type="text" value="" name="Subject">
+<option>BTECH</option>
+<option>BBA</option>
+<option>BCA</option>
+<option>B.COM</option>
+</select>
+</p>
+  </br>
+	</br >
+<p>Comments: <textarea name="Comment"> </textarea></p>
 <p>
-				SELECT YOUR COURSE
-				<select type="text" value="" name="Subject">
-					<option>BTECH</option>
-					<option>BBA</option>
-					<option>BCA</option>
-					<option>B.COM</option>
-				</select>
+<input class="but" type="submit" name="submit">
+<input class="but" type="reset" name="reset">
 			</p>
-
-        </br>
-    </br >
-			
-<p>Comments: <textarea 
-							name="Comment"> </textarea></p>
-
-			
-<p>
-				<input type="submit"
-					value="send" name="Submit" />
-				<input type="reset"
-					value="Reset" name="Reset" />
-			</p>
-
 		</form>
 	</body>
-
-  </body>
 </html>
