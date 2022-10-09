@@ -10,25 +10,29 @@
   </head>
   <body>
     
-<form>
-	<div class="formdesign" id="name">Name:<input type="text" name="name">
-		<span class="formerror"><b>THIS IS AN ERROR!</b></span>
+<form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+	<div class="formdesign" id="name">Name:<input type="text" name="name" required>
+		<span class="formerror"><b></b></span>
 	</div>
 </br>
 <div class="formdesign" id="email">Email:<input type="email" name="email">
-	<span class="formerror"><b>THIS IS AN ERROR!</b></span>
+	<b>	<span class="formerror"></span>
+	</b>
 </div>
 </br>
 <div class="formdesign" id="phone">Phone number:<input type="phone" name="phone">
-	<span class="formerror"><b>THIS IS AN ERROR!</b></span>
+	<b>	<span class="formerror"></span>
+	</b></span>
 </div>
 </br>
 <div class="formdesign" id="password">Password:<input type="text" name="password">
-	<span class="formerror"><b>THIS IS AN ERROR!</b></span>
+	<b>	<span class="formerror"></span>
+	</b></span>
 </div>
 </br>
 <div class="formdesign" id="cpassword">Confirm Password:<input type="text" name="cpassword">
-	<span class="formerror"><b>THIS IS AN ERROR!</b></span>
+	<b>	<span class="formerror"></span>
+	</b></span>
 </div>
 </br>
 <p>SELECT YOUR COURSE
