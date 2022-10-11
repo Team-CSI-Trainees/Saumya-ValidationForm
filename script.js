@@ -4,6 +4,11 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 
+var userCheck = /^[A-Za-z. ]{3,25}$/;
+var passwordCheck = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,18}$/;
+var emailCheck = /^[a-zA-Z0-9_.]{3,}[@][a-zA-Z]{3,}[.]{1}[A-Za-z.]{2,8}$/;
+var phoneCheck = /^[0-9]{10}$/;
+
 // show input error message
 function showError(input, message) {
   const formControl = input.parentElement;
@@ -18,14 +23,38 @@ function showSuccess(input) {
   formControl.className = "form-control success";
 }
 
+function checkUser(input) {
+  if (userCheck.test(input.value.trim())) {
+    showSuccess(input);
+  } else {
+    showError(input, "Username is not valid");
+  }
+}
+
 //check email is valid
 function checkEmail(input) {
-  const re =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if (re.test(input.value.trim())) {
+  if (emailCheck.test(input.value.trim())) {
     showSuccess(input);
   } else {
     showError(input, "Email is not valid");
+  }
+}
+
+//check password is valid
+function checkpassword(input) {
+  if (passwordCheck.test(input.value.trim())) {
+    showSuccess(input);
+  } else {
+    showError(input, "Password is not valid");
+  }
+}
+
+//check phone number is valid
+function checkPhone(input) {
+  if (phoneCheck.test(input.value.trim())) {
+    showSuccess(input);
+  } else {
+    showError(input, "Phone Number is not valid");
   }
 }
 
@@ -75,8 +104,11 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   checkRequired([username, email, password, password2]);
+  checkUser(username);
   checkLength(username, 3, 15);
   checkLength(password, 6, 25);
   checkEmail(email);
+  checkPhone(phone);
+  checkpassword(password);
   checkPasswordsMatch(password, password2);
 });
