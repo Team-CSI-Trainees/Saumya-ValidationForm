@@ -1,10 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&dispay=swap");
+
+:root {
+  --success-color: #23cc71;
+  --error-color: #e74c3c;
+}
+
 * {
-  padding: 10px 50px;
   box-sizing: border-box;
 }
+
 body {
-  background-image: url(https://static.vecteezy.com/system/resources/previews/002/677/487/large_2x/abstract-pink-pastel-paper-background-texture-pastel-color-watercolor-marbled-painting-chalkboard-concrete-art-rough-stylized-texture-background-for-aesthetic-creative-design-free-photo.jpg);
-  font-family: "open sans", sans-serif;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/004/770/338/non_2x/blue-dawn-sky-with-cloud-horizontal-lines-motion-effect-on-background-from-sunshine-free-photo.jpg);
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,45 +23,80 @@ body {
 .container {
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   width: 400px;
-  min-width: 100%;
 }
-.header {
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #f0f0f0;
-  padding: 20px 40px;
+
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
 }
-#form {
+
+.form {
   padding: 30px 40px;
 }
 
-.header h1 {
-  margin: 0;
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
 }
 
-.formdesign {
-  margin-bottom: 10px;
-  position: relative;
-  padding-bottom: 20px;
-  font-size: 20px;
+.form-control label {
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
 }
-.formdesign input {
-  width: 50%;
-  padding: 12px 20px;
-  border: 1px solid blue;
+
+.form-control input {
+  border: 2px solid #f0f0f0;
   border-radius: 4px;
-  font-size: 15px;
-  display: inline-block;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
 }
-.formerror {
-  color: red;
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
 }
-.but {
-  border-radius: 16px;
-  width: 100px;
-  height: 30px;
-  font-size: 15px;
-  margin: 22px 20px;
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  border-radius: 4px;
+  text-emphasis-color: white;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: "montsserat", sans-serif;
+  background-image: linear-gradient(to left, #fda7df, #9980fa, #fda7df);
+  transition: 0.6s;
+  border-color: #fff;
+}
+.form button:hover {
+  background-position: right;
 }
