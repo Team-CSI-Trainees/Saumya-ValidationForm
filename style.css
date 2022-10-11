@@ -1,7 +1,42 @@
 * {
   padding: 10px 50px;
+  box-sizing: border-box;
 }
+body {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/002/677/487/large_2x/abstract-pink-pastel-paper-background-texture-pastel-color-watercolor-marbled-painting-chalkboard-concrete-art-rough-stylized-texture-background-for-aesthetic-creative-design-free-photo.jpg);
+  font-family: "open sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 400px;
+  min-width: 100%;
+}
+.header {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20px 40px;
+}
+#form {
+  padding: 30px 40px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
 .formdesign {
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 20px;
   font-size: 20px;
 }
 .formdesign input {
@@ -10,6 +45,7 @@
   border: 1px solid blue;
   border-radius: 4px;
   font-size: 15px;
+  display: inline-block;
 }
 .formerror {
   color: red;
